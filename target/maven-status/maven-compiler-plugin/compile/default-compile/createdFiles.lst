@@ -1,0 +1,9 @@
+dependenceAnalysis/util/DataFlowAnalysis.class
+dependenceAnalysis/util/cfg/CFGExtractor.class
+dependenceAnalysis/util/cfg/Node.class
+fileComparison/DuplicateDetector.class
+fileComparison/TablePrinter.class
+dependenceAnalysis/util/cfg/CFGExtractor$1.class
+fileComparison/FileComparator.class
+dependenceAnalysis/util/cfg/Graph.class
+ClassMetrics.class

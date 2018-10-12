@@ -1,0 +1,159 @@
+Timestamp, Message, Committer, Added, Removed, File
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,465,src/main/java/org/apache/commons/math4/complex/Quaternion.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,218,src/main/java/org/apache/commons/math4/complex/RootsOfUnity.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,209,src/main/java/org/apache/commons/math4/fraction/AbstractFormat.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,287,src/main/java/org/apache/commons/math4/fraction/BigFractionFormat.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,264,src/main/java/org/apache/commons/math4/fraction/FractionFormat.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,238,src/main/java/org/apache/commons/math4/fraction/ProperBigFractionFormat.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,231,src/main/java/org/apache/commons/math4/fraction/ProperFractionFormat.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,126,src/main/java/org/apache/commons/math4/primes/Primes.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,188,src/main/java/org/apache/commons/math4/primes/SmallPrimes.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,20,src/main/java/org/apache/commons/math4/primes/package-info.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,459,src/test/java/org/apache/commons/math4/complex/QuaternionTest.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,102,src/test/java/org/apache/commons/math4/complex/RootsOfUnityTest.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,335,src/test/java/org/apache/commons/math4/fraction/BigFractionFormatTest.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,354,src/test/java/org/apache/commons/math4/fraction/FractionFormatTest.java
+"1505583520", "MATH1416 Merge changes from featureMATH1416", "Ray DeCampo", 0,174,src/test/java/org/apache/commons/math4/primes/PrimesTest.java
+"1505582654", "MATH1416 Remove oamprimes package from commonsmath as it have been moved to commonsnumbers", "Ray DeCampo", 0,20,src/main/java/org/apache/commons/math4/primes/package-info.java
+"1505582406", "MATH1416 Remove SmallPrimes from commonsmath as it have been moved to commonsnumbers", "Ray DeCampo", 0,188,src/main/java/org/apache/commons/math4/primes/SmallPrimes.java
+"1505582260", "MATH1416 Remove Primes from commonsmath as it have been moved to commonsnumbers", "Ray DeCampo", 0,126,src/main/java/org/apache/commons/math4/primes/Primes.java
+"1505582260", "MATH1416 Remove Primes from commonsmath as it have been moved to commonsnumbers", "Ray DeCampo", 0,174,src/test/java/org/apache/commons/math4/primes/PrimesTest.java
+"1505576358", "MATH1416 Remove RootsOfUnity from commonsmath as it have been moved to commonsnumbers", "Ray DeCampo", 0,218,src/main/java/org/apache/commons/math4/complex/RootsOfUnity.java
+"1505576358", "MATH1416 Remove RootsOfUnity from commonsmath as it have been moved to commonsnumbers", "Ray DeCampo", 0,102,src/test/java/org/apache/commons/math4/complex/RootsOfUnityTest.java
+"1505576170", "MATH1416 Remove Quaternion from commonsmath as it have been moved to commonsnumbers", "Ray DeCampo", 0,465,src/main/java/org/apache/commons/math4/complex/Quaternion.java
+"1505576170", "MATH1416 Remove Quaternion from commonsmath as it have been moved to commonsnumbers", "Ray DeCampo", 0,459,src/test/java/org/apache/commons/math4/complex/QuaternionTest.java
+"1505509492", "MATH1416 Remove AbstractFormat from commonsmath as they have been moved to commonsnumbers", "Ray DeCampo", 0,209,src/main/java/org/apache/commons/math4/fraction/AbstractFormat.java
+"1505509329", "MATH1416 Remove BigFractionFormat and ProperBigFractionFormat from commonsmath as they have been moved to commonsnumbers", "Ray DeCampo", 0,287,src/main/java/org/apache/commons/math4/fraction/BigFractionFormat.java
+"1505509329", "MATH1416 Remove BigFractionFormat and ProperBigFractionFormat from commonsmath as they have been moved to commonsnumbers", "Ray DeCampo", 0,238,src/main/java/org/apache/commons/math4/fraction/ProperBigFractionFormat.java
+"1505509329", "MATH1416 Remove BigFractionFormat and ProperBigFractionFormat from commonsmath as they have been moved to commonsnumbers", "Ray DeCampo", 0,335,src/test/java/org/apache/commons/math4/fraction/BigFractionFormatTest.java
+"1505509080", "MATH1416 Remove FractionFormat and ProperFractionFormat from commonsmath as they have been moved to commonsnumbers", "Ray DeCampo", 0,264,src/main/java/org/apache/commons/math4/fraction/FractionFormat.java
+"1505509080", "MATH1416 Remove FractionFormat and ProperFractionFormat from commonsmath as they have been moved to commonsnumbers", "Ray DeCampo", 0,231,src/main/java/org/apache/commons/math4/fraction/ProperFractionFormat.java
+"1505509080", "MATH1416 Remove FractionFormat and ProperFractionFormat from commonsmath as they have been moved to commonsnumbers", "Ray DeCampo", 0,354,src/test/java/org/apache/commons/math4/fraction/FractionFormatTest.java
+"1502892274", "RAT check", "Gilles", 15,0,.travis.yml
+"1502892274", "RAT check", "Gilles", 16,1,doc/development/development.howto.txt
+"1502889658", "Explicitly use class from Commons RNGChange removes the dependency loop between oacmath4random andoacmath4distribution packages", "Gilles", 4,4,src/main/java/org/apache/commons/math4/random/GaussianRandomGenerator.java
+"1502887339", "MATH1429 UnitSphereRandomVectorGenerator replaced by UnitSphereSamplerFunctionality moved to Commons RNG  httpsissuesapacheorgjirabrowseRNG39", "Gilles", 2,2,src/main/java/org/apache/commons/math4/analysis/interpolation/InterpolatingMicrosphere.java
+"1502887339", "MATH1429 UnitSphereRandomVectorGenerator replaced by UnitSphereSamplerFunctionality moved to Commons RNG  httpsissuesapacheorgjirabrowseRNG39", "Gilles", 4,2,src/main/java/org/apache/commons/math4/analysis/interpolation/MicrosphereProjectionInterpolator.java
+"1502887339", "MATH1429 UnitSphereRandomVectorGenerator replaced by UnitSphereSamplerFunctionality moved to Commons RNG  httpsissuesapacheorgjirabrowseRNG39", "Gilles", 0,84,src/main/java/org/apache/commons/math4/random/UnitSphereRandomVectorGenerator.java
+"1502887339", "MATH1429 UnitSphereRandomVectorGenerator replaced by UnitSphereSamplerFunctionality moved to Commons RNG  httpsissuesapacheorgjirabrowseRNG39", "Gilles", 6,6,src/test/java/org/apache/commons/math4/geometry/enclosing/WelzlEncloser3DTest.java
+"1502887339", "MATH1429 UnitSphereRandomVectorGenerator replaced by UnitSphereSamplerFunctionality moved to Commons RNG  httpsissuesapacheorgjirabrowseRNG39", "Gilles", 7,7,src/test/java/org/apache/commons/math4/geometry/euclidean/threed/FieldRotationDSTest.java
+"1502887339", "MATH1429 UnitSphereRandomVectorGenerator replaced by UnitSphereSamplerFunctionality moved to Commons RNG  httpsissuesapacheorgjirabrowseRNG39", "Gilles", 8,8,src/test/java/org/apache/commons/math4/geometry/euclidean/threed/FieldRotationDfpTest.java
+"1502887339", "MATH1429 UnitSphereRandomVectorGenerator replaced by UnitSphereSamplerFunctionality moved to Commons RNG  httpsissuesapacheorgjirabrowseRNG39", "Gilles", 6,8,src/test/java/org/apache/commons/math4/geometry/euclidean/threed/SphereGeneratorTest.java
+"1502887339", "MATH1429 UnitSphereRandomVectorGenerator replaced by UnitSphereSamplerFunctionality moved to Commons RNG  httpsissuesapacheorgjirabrowseRNG39", "Gilles", 6,7,src/test/java/org/apache/commons/math4/geometry/euclidean/twod/DiskGeneratorTest.java
+"1502887339", "MATH1429 UnitSphereRandomVectorGenerator replaced by UnitSphereSamplerFunctionality moved to Commons RNG  httpsissuesapacheorgjirabrowseRNG39", "Gilles", 8,8,src/test/java/org/apache/commons/math4/geometry/spherical/twod/CircleTest.java
+"1502887339", "MATH1429 UnitSphereRandomVectorGenerator replaced by UnitSphereSamplerFunctionality moved to Commons RNG  httpsissuesapacheorgjirabrowseRNG39", "Gilles", 26,26,src/test/java/org/apache/commons/math4/geometry/spherical/twod/SphericalPolygonsSetTest.java
+"1502887339", "MATH1429 UnitSphereRandomVectorGenerator replaced by UnitSphereSamplerFunctionality moved to Commons RNG  httpsissuesapacheorgjirabrowseRNG39", "Gilles", 0,70,src/test/java/org/apache/commons/math4/random/UnitSphereRandomVectorGeneratorTest.java
+"1502757160", "Stop trying to build with JDK7 on TravisSee  httpmarkmailorgmessagercayzpntymt4ci34", "Gilles", 0,1,.travis.yml
+"1502327093", "Plugins update", "Gilles", 4,4,pom.xml
+"1502322005", "Update mavenjgitbuildnumberplugin", "Gilles", 2,2,pom.xml
+"1502282262", "Unused import", "Gilles", 0,1,src/main/java/org/apache/commons/math4/geometry/euclidean/twod/Line.java
+"1502281976", "MATH1426 Add constructor that takes a Double argumentThanks to Karl Richter", "Gilles", 3,0,pom.xml
+"1502281976", "MATH1426 Add constructor that takes a Double argumentThanks to Karl Richter", "Gilles", 3,0,src/changes/changes.xml
+"1502281976", "MATH1426 Add constructor that takes a Double argumentThanks to Karl Richter", "Gilles", 17,0,src/main/java/org/apache/commons/math4/stat/descriptive/DescriptiveStatistics.java
+"1502281976", "MATH1426 Add constructor that takes a Double argumentThanks to Karl Richter", "Gilles", 93,0,src/test/java/org/apache/commons/math4/stat/descriptive/DescriptiveStatisticsTest.java
+"1502279761", "Javadoc", "Gilles", 1,1,src/main/java/org/apache/commons/math4/stat/descriptive/DescriptiveStatistics.java
+"1502279662", "JavadocThanks to Karl Richter", "Gilles", 10,8,src/main/java/org/apache/commons/math4/stat/descriptive/DescriptiveStatistics.java
+"1500682655", "MATH1425 Overridden methods for improved performanceThanks to Christoph Dibak", "Gilles", 24,0,src/main/java/org/apache/commons/math4/linear/Array2DRowRealMatrix.java
+"1500376250", "Javadoc", "Gilles", 3,0,src/main/java/org/apache/commons/math4/linear/QRDecomposition.java
+"1498094223", "Javadoc", "Gilles", 2,5,src/main/java/org/apache/commons/math4/stat/interval/WilsonScoreInterval.java
+"1498094075", "Avoid repeated computations", "Gilles", 7,7,src/main/java/org/apache/commons/math4/stat/interval/WilsonScoreInterval.java
+"1498093395", "MATH1421 Code refactoringReplaced unnecessary usage of pow functionReordered some operationsIt fixes the reported case where the lower bound was negative see unittest but it might not be sufficient to avoid the problem in all cases", "Gilles", 5,4,src/main/java/org/apache/commons/math4/stat/interval/WilsonScoreInterval.java
+"1498093395", "MATH1421 Code refactoringReplaced unnecessary usage of pow functionReordered some operationsIt fixes the reported case where the lower bound was negative see unittest but it might not be sufficient to avoid the problem in all cases", "Gilles", 5,0,src/test/java/org/apache/commons/math4/stat/interval/WilsonScoreIntervalTest.java
+"1497532007", "Merge commit refspull62head of httpsgithubcomapachecommonsmathCloses 62", "Gilles", 1,1,src/main/java/org/apache/commons/math4/exception/util/LocalizedFormats.java
+"1497532007", "Merge commit refspull62head of httpsgithubcomapachecommonsmathCloses 62", "Gilles", 1,1,src/main/resources/assets/org/apache/commons/math4/exception/util/LocalizedFormats_fr.properties
+"1497529281", "MATH1419", "Gilles", 3,0,src/changes/changes.xml
+"1497529281", "MATH1419", "Gilles", 1,1,src/main/java/org/apache/commons/math4/analysis/polynomials/PolynomialSplineFunction.java
+"1497529026", "MATH1419 Invalid usage of exception in PolynomialSplineFunctionFix order of parameter for NumberIsTooSmallException when length ofknots is less than 2 in the constructor of PolynomialSplineFunction tobe fit with the definition of the exception Moreover boundedIsAllowedvalue is changed to true since 2 is also allowed valueChange the error message format for this exception appropriately inEnglish and FrenchSince this does not affect any error during using the library but tomake the code more concrete following definition strictly is importantthings to implement functionalities", "Hang Park", 1,1,src/main/java/org/apache/commons/math4/analysis/polynomials/PolynomialSplineFunction.java
+"1497529026", "MATH1419 Invalid usage of exception in PolynomialSplineFunctionFix order of parameter for NumberIsTooSmallException when length ofknots is less than 2 in the constructor of PolynomialSplineFunction tobe fit with the definition of the exception Moreover boundedIsAllowedvalue is changed to true since 2 is also allowed valueChange the error message format for this exception appropriately inEnglish and FrenchSince this does not affect any error during using the library but tomake the code more concrete following definition strictly is importantthings to implement functionalities", "Hang Park", 1,1,src/main/java/org/apache/commons/math4/exception/util/LocalizedFormats.java
+"1497529026", "MATH1419 Invalid usage of exception in PolynomialSplineFunctionFix order of parameter for NumberIsTooSmallException when length ofknots is less than 2 in the constructor of PolynomialSplineFunction tobe fit with the definition of the exception Moreover boundedIsAllowedvalue is changed to true since 2 is also allowed valueChange the error message format for this exception appropriately inEnglish and FrenchSince this does not affect any error during using the library but tomake the code more concrete following definition strictly is importantthings to implement functionalities", "Hang Park", 1,1,src/main/resources/assets/org/apache/commons/math4/exception/util/LocalizedFormats_fr.properties
+"1496449876", "MATH1416 Delete functionality available in Commons Numbers", "Gilles", 0,23,src/main/java/org/apache/commons/math4/util/MathUtils.java
+"1496449876", "MATH1416 Delete functionality available in Commons Numbers", "Gilles", 6,18,src/test/java/org/apache/commons/math4/util/MathUtilsTest.java
+"1496449770", "MATH1416 Depend on Commons NumbersUse utility methods now defined in module commonsnumbersangle", "Gilles", 6,0,pom.xml
+"1496449770", "MATH1416 Depend on Commons NumbersUse utility methods now defined in module commonsnumbersangle", "Gilles", 5,5,src/main/java/org/apache/commons/math4/geometry/euclidean/twod/Line.java
+"1496449770", "MATH1416 Depend on Commons NumbersUse utility methods now defined in module commonsnumbersangle", "Gilles", 3,2,src/main/java/org/apache/commons/math4/geometry/spherical/oned/Arc.java
+"1496449770", "MATH1416 Depend on Commons NumbersUse utility methods now defined in module commonsnumbersangle", "Gilles", 4,3,src/main/java/org/apache/commons/math4/geometry/spherical/oned/ArcsSet.java
+"1496449770", "MATH1416 Depend on Commons NumbersUse utility methods now defined in module commonsnumbersangle", "Gilles", 2,1,src/main/java/org/apache/commons/math4/geometry/spherical/oned/S1Point.java
+"1496449770", "MATH1416 Depend on Commons NumbersUse utility methods now defined in module commonsnumbersangle", "Gilles", 2,1,src/main/java/org/apache/commons/math4/geometry/spherical/twod/Edge.java
+"1496449770", "MATH1416 Depend on Commons NumbersUse utility methods now defined in module commonsnumbersangle", "Gilles", 5,4,src/test/java/org/apache/commons/math4/fitting/HarmonicCurveFitterTest.java
+"1496449770", "MATH1416 Depend on Commons NumbersUse utility methods now defined in module commonsnumbersangle", "Gilles", 2,2,src/test/java/org/apache/commons/math4/geometry/euclidean/threed/FieldRotationDSTest.java
+"1496449770", "MATH1416 Depend on Commons NumbersUse utility methods now defined in module commonsnumbersangle", "Gilles", 2,2,src/test/java/org/apache/commons/math4/geometry/euclidean/threed/FieldRotationDfpTest.java
+"1496449770", "MATH1416 Depend on Commons NumbersUse utility methods now defined in module commonsnumbersangle", "Gilles", 2,2,src/test/java/org/apache/commons/math4/geometry/euclidean/threed/RotationTest.java
+"1496017960", "Implementation details should not be public", "Gilles", 2,2,src/main/java/org/apache/commons/math4/distribution/PoissonDistribution.java
+"1496017734", "JavadocRemoved link references were causing javadoc warnings", "Gilles", 1,7,src/main/java/org/apache/commons/math4/distribution/PoissonDistribution.java
+"1496017343", "JavadocMethods moved to Commons Numbers", "Gilles", 2,2,src/main/java/org/apache/commons/math4/geometry/euclidean/threed/FieldVector3D.java
+"1496016965", "Javadoc errorsFields that are private cannot be referenced with the value tag", "Gilles", 9,27,src/main/java/org/apache/commons/math4/stat/inference/KolmogorovSmirnovTest.java
+"1495931438", "Javadoc", "Gilles", 4,4,src/main/java/org/apache/commons/math4/distribution/GammaDistribution.java
+"1495929242", "chore pointing commonsosgisymbolicName to package name in pom", "Rob Tompkins", 1,1,pom.xml
+"1495895971", "chore adding commonsmodulename to pom", "Rob Tompkins", 7,4,pom.xml
+"1495670536", "MATH1416 Delete utilities now in Commons Numbers", "Gilles", 0,475,src/main/java/org/apache/commons/math4/util/MathArrays.java
+"1495670536", "MATH1416 Delete utilities now in Commons Numbers", "Gilles", 10,9,src/test/java/org/apache/commons/math4/ExtendedFieldElementAbstractTest.java
+"1495670536", "MATH1416 Delete utilities now in Commons Numbers", "Gilles", 5,5,src/test/java/org/apache/commons/math4/geometry/euclidean/twod/hull/ConvexHullGenerator2DAbstractTest.java
+"1495670536", "MATH1416 Delete utilities now in Commons Numbers", "Gilles", 0,298,src/test/java/org/apache/commons/math4/util/MathArraysTest.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 6,0,pom.xml
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 2,2,src/main/java/org/apache/commons/math4/analysis/FunctionUtils.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 4,4,src/main/java/org/apache/commons/math4/analysis/differentiation/DSCompiler.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 9,8,src/main/java/org/apache/commons/math4/analysis/differentiation/DerivativeStructure.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 10,10,src/main/java/org/apache/commons/math4/analysis/differentiation/SparseGradient.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 2,1,src/main/java/org/apache/commons/math4/analysis/interpolation/BicubicInterpolatingFunction.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 4,2,src/main/java/org/apache/commons/math4/analysis/interpolation/InterpolatingMicrosphere.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 15,15,src/main/java/org/apache/commons/math4/geometry/euclidean/threed/Cartesian3D.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 10,10,src/main/java/org/apache/commons/math4/geometry/euclidean/threed/Rotation.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 4,4,src/main/java/org/apache/commons/math4/geometry/euclidean/twod/Cartesian2D.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 24,24,src/main/java/org/apache/commons/math4/geometry/euclidean/twod/Line.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 3,3,src/main/java/org/apache/commons/math4/geometry/euclidean/twod/hull/ConvexHull2D.java
+"1495669669", "MATH1416 Depend on Commons Numbers module commonsnumbersarrays", "Gilles", 9,8,src/main/java/org/apache/commons/math4/util/Decimal64.java
+"1495409256", "Missing Javadoc comment", "Gilles", 2,1,src/main/java/org/apache/commons/math4/distribution/GammaDistribution.java
+"1495409212", "Unused import", "Gilles", 0,2,src/main/java/org/apache/commons/math4/util/CombinatoricsUtils.java
+"1495409163", "Trailing whitespace CheckStyle", "Gilles", 1,1,src/main/java/org/apache/commons/math4/geometry/euclidean/oned/Vector1D.java
+"1495409163", "Trailing whitespace CheckStyle", "Gilles", 1,1,src/main/java/org/apache/commons/math4/geometry/euclidean/threed/Plane.java
+"1495409163", "Trailing whitespace CheckStyle", "Gilles", 2,2,src/main/java/org/apache/commons/math4/ode/events/package-info.java
+"1495409163", "Trailing whitespace CheckStyle", "Gilles", 1,1,src/main/java/org/apache/commons/math4/optim/linear/SimplexTableau.java
+"1495409163", "Trailing whitespace CheckStyle", "Gilles", 1,1,src/main/java/org/apache/commons/math4/stat/regression/AbstractMultipleLinearRegression.java
+"1495407374", "MATH1416 Deleted code ported to Commons Numbers module commonsnumberscombinatorics", "Gilles", 0,415,src/main/java/org/apache/commons/math4/util/Combinations.java
+"1495407374", "MATH1416 Deleted code ported to Commons Numbers module commonsnumberscombinatorics", "Gilles", 5,431,src/main/java/org/apache/commons/math4/util/CombinatoricsUtils.java
+"1495407374", "MATH1416 Deleted code ported to Commons Numbers module commonsnumberscombinatorics", "Gilles", 0,200,src/test/java/org/apache/commons/math4/util/CombinationsTest.java
+"1495407374", "MATH1416 Deleted code ported to Commons Numbers module commonsnumberscombinatorics", "Gilles", 2,281,src/test/java/org/apache/commons/math4/util/CombinatoricsUtilsTest.java
+"1495407374", "MATH1416 Deleted code ported to Commons Numbers module commonsnumberscombinatorics", "Gilles", 0,111,src/test/java/org/apache/commons/math4/util/FactorialLogTest.java
+"1495407241", "MATH1416 Replaced usage of combinatorics code with equivalent calls to Commons Numbers", "Gilles", 4,3,src/main/java/org/apache/commons/math4/analysis/differentiation/DSCompiler.java
+"1495407241", "MATH1416 Replaced usage of combinatorics code with equivalent calls to Commons Numbers", "Gilles", 5,3,src/main/java/org/apache/commons/math4/analysis/interpolation/HermiteInterpolator.java
+"1495407241", "MATH1416 Replaced usage of combinatorics code with equivalent calls to Commons Numbers", "Gilles", 2,2,src/main/java/org/apache/commons/math4/analysis/polynomials/PolynomialsUtils.java
+"1495407241", "MATH1416 Replaced usage of combinatorics code with equivalent calls to Commons Numbers", "Gilles", 4,3,src/main/java/org/apache/commons/math4/distribution/PascalDistribution.java
+"1495407241", "MATH1416 Replaced usage of combinatorics code with equivalent calls to Commons Numbers", "Gilles", 2,2,src/main/java/org/apache/commons/math4/stat/inference/KolmogorovSmirnovTest.java
+"1495407241", "MATH1416 Replaced usage of combinatorics code with equivalent calls to Commons Numbers", "Gilles", 2,2,src/test/java/org/apache/commons/math4/analysis/differentiation/DSCompilerTest.java
+"1495407241", "MATH1416 Replaced usage of combinatorics code with equivalent calls to Commons Numbers", "Gilles", 3,3,src/test/java/org/apache/commons/math4/analysis/differentiation/DerivativeStructureTest.java
+"1495407241", "MATH1416 Replaced usage of combinatorics code with equivalent calls to Commons Numbers", "Gilles", 2,2,src/test/java/org/apache/commons/math4/analysis/polynomials/PolynomialsUtilsTest.java
+"1495407241", "MATH1416 Replaced usage of combinatorics code with equivalent calls to Commons Numbers", "Gilles", 4,4,src/test/java/org/apache/commons/math4/linear/InverseHilbertMatrix.java
+"1495407241", "MATH1416 Replaced usage of combinatorics code with equivalent calls to Commons Numbers", "Gilles", 2,2,src/test/java/org/apache/commons/math4/stat/inference/KolmogorovSmirnovTestTest.java
+"1495407115", "MATH1416 Depend on Commons Numbers", "Gilles", 6,0,pom.xml
+"1495335189", "MATH1416 Deleted ContinuedFractionCode is now part of Commons Numbers in module commonsnumbersfraction", "Gilles", 0,180,src/main/java/org/apache/commons/math4/util/ContinuedFraction.java
+"1495335189", "MATH1416 Deleted ContinuedFractionCode is now part of Commons Numbers in module commonsnumbersfraction", "Gilles", 0,46,src/test/java/org/apache/commons/math4/util/ContinuedFractionTest.java
+"1494803747", "MATH1416 Delete functionality now in Commons Numbers", "Gilles", 0,243,src/main/java/org/apache/commons/math4/special/Erf.java
+"1494803747", "MATH1416 Delete functionality now in Commons Numbers", "Gilles", 0,261,src/test/java/org/apache/commons/math4/special/ErfTest.java
+"1494803709", "MATH1416 Depend on Commons Numbers module commonsnumbersgamma", "Gilles", 4,3,src/main/java/org/apache/commons/math4/distribution/LevyDistribution.java
+"1494803709", "MATH1416 Depend on Commons Numbers module commonsnumbersgamma", "Gilles", 4,3,src/main/java/org/apache/commons/math4/distribution/LogNormalDistribution.java
+"1494803709", "MATH1416 Depend on Commons Numbers module commonsnumbersgamma", "Gilles", 6,4,src/main/java/org/apache/commons/math4/distribution/NormalDistribution.java
+"1494797485", "MATH1416 Delete functionality now in Commons Numbers", "Gilles", 0,484,src/main/java/org/apache/commons/math4/special/Beta.java
+"1494797485", "MATH1416 Delete functionality now in Commons Numbers", "Gilles", 0,746,src/main/java/org/apache/commons/math4/special/Gamma.java
+"1494797485", "MATH1416 Delete functionality now in Commons Numbers", "Gilles", 0,979,src/test/java/org/apache/commons/math4/special/BetaTest.java
+"1494797485", "MATH1416 Delete functionality now in Commons Numbers", "Gilles", 0,998,src/test/java/org/apache/commons/math4/special/GammaTest.java
+"1494797339", "MATH1416 Depend on Commons Numbers module commonsnumbersgamma", "Gilles", 2,2,src/main/java/org/apache/commons/math4/distribution/BetaDistribution.java
+"1494797339", "MATH1416 Depend on Commons Numbers module commonsnumbersgamma", "Gilles", 3,3,src/main/java/org/apache/commons/math4/distribution/BinomialDistribution.java
+"1494797339", "MATH1416 Depend on Commons Numbers module commonsnumbersgamma", "Gilles", 4,3,src/main/java/org/apache/commons/math4/distribution/FDistribution.java
+"1494797339", "MATH1416 Depend on Commons Numbers module commonsnumbersgamma", "Gilles", 3,3,src/main/java/org/apache/commons/math4/distribution/PascalDistribution.java
+"1494797339", "MATH1416 Depend on Commons Numbers module commonsnumbersgamma", "Gilles", 4,5,src/main/java/org/apache/commons/math4/distribution/TDistribution.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 6,0,pom.xml
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 2,2,src/main/java/org/apache/commons/math4/distribution/BetaDistribution.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 13,13,src/main/java/org/apache/commons/math4/distribution/GammaDistribution.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 6,5,src/main/java/org/apache/commons/math4/distribution/NakagamiDistribution.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 5,5,src/main/java/org/apache/commons/math4/distribution/PoissonDistribution.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 2,2,src/main/java/org/apache/commons/math4/distribution/SaddlePointExpansion.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 3,3,src/main/java/org/apache/commons/math4/distribution/TDistribution.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 3,3,src/main/java/org/apache/commons/math4/distribution/WeibullDistribution.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 3,2,src/main/java/org/apache/commons/math4/special/BesselJ.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 19,17,src/main/java/org/apache/commons/math4/special/Beta.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 7,7,src/main/java/org/apache/commons/math4/special/Erf.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 4,4,src/main/java/org/apache/commons/math4/util/CombinatoricsUtils.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 2,2,src/test/java/org/apache/commons/math4/analysis/integration/gauss/LaguerreTest.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 3,3,src/test/java/org/apache/commons/math4/distribution/GammaDistributionTest.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 5,5,src/test/java/org/apache/commons/math4/distribution/WeibullDistributionTest.java
+"1494703284", "MATH1416 Depend on Commons Numbers module commonsnumbersgammaTransitional state until issue NUMBERS39 is done", "Gilles", 3,3,src/test/java/org/apache/commons/math4/util/FactorialLogTest.java

@@ -1,0 +1,18 @@
+{
+    "contents" : "library(plyr)\nlibrary(ggplot2)\n\ndiffs <- read.csv(\"diffs.csv\")\nchurnSummary <- ddply(diffs,.(File),summarise,Add=sum(Added), Rem=sum(Removed), TotalChurn = Add+Rem, Edits=length(File))\nggplot(churnSummary,aes(x=Add,y=Rem)) + geom_point(aes(size=Edits)) + geom_text(data=churnSummary[churnSummary$TotalChurn>500,],aes(label=File),nudge_x = 40)\n",
+    "created" : 1511536782363.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4220678617",
+    "id" : "F43F32AA",
+    "lastKnownWriteTime" : 1511537329,
+    "path" : "~/OneDrive - University of Leicester/Teaching/Reengineering/201718/practicalWork/StaticAnalysisLab/src/main/scripts/churn-analysis.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

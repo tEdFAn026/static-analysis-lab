@@ -1,0 +1,93 @@
+﻿<html lang="en-GB-UoL">
+<head>
+    <title>Lab session – System Reengineering</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta id="request-method" name="request-method" content="GET">
+    <meta name="author" content="Blackboard">
+    <meta name="copyright" content="© 1997-2018 Blackboard Inc. All Rights Reserved. US Patent No. 7,493,396 and 7,558,853. Additional Patents Pending.">
+    <meta name="keywords" content="Blackboard">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body id="learn-oe-body">
+    <div id="globalNavPageContentArea">
+        <div class="locationPane">
+            <div role="main" id="contentPanel" class="contentPane  ">
+                <div class="shadow">
+                    <div id="editmodeWrapper">
+                        <div id="content" class="contentBox ">
+                            <div id="pageTitleDiv" class="pageTitle clearfix ">
+                                <div id="pageTitleBar" class="pageTitleIcon" tabindex="0">
+                                    <h1 id="pageTitleHeader" tabindex="-1">
+                                        <span id="pageTitleText">
+                                            Lab session
+                                        </span>
+                                    </h1>
+                                    <span id="_titlebarExtraContent" class="titleButtons"></span>
+                                </div>
+                            </div>
+                            <div class="container clearfix" id="containerdiv">
+                                <div class="vtbegenerated">
+                                    <br>
+                                    <p class="p1"><span class="s1">In this lab we will, following on from our lecture on duplicate analysis, generate dot-plots to expose and analyse code clones.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">Within your static analysis lab project, there is a package called fileComparison. This contains three classes:</span></p>
+                                    <p class="p2"></p>
+                                    <ul class="ul1">
+                                        <li class="li1"><span class="s1">DuplicateDetector can be pointed to the root of a source directory structure and generates a matrix that compares every source file within it (and any sub-directories). For every pair of files, a score is computed to estimate their “overlap”. This is computed by measuring the proportion of lines (excluding blank lines and single lines with `{` or `}`) that exist in both files. The result is a two-dimensional array (a matrix) of values where higher values indicate a greater degree of overlap between the files.</span></li>
+                                        <li class="li1"><span class="s1">FileComparator can take two specific files, and will create a Dotplot (as covered in the lecture). It will also produce a matrix, but this time it will create a boolean matrix, where a true entry indicates that two lines are identical.</span></li>
+                                        <li class="li1"><span class="s1">TablePrinter takes the matrices and prints them to a csv file (where every pair of elements is linked to its score).</span></li>
+                                    </ul>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">The CSV files are themselves not particularly helpful. These can however be readily visualised in R. The scripts that will convert each of these matrices into visual dot-plots (stored as png files) can be found in: scripts/fileComparisonScripts.R</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">You may need to weak the height and with arguments (or tweak the font sizes etc.) to make a more readable image. If you use the default settings, the labels should be readable if you zoom in.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">Instructions:</span></p>
+                                    <p class="p2">Before you do anything, do a "git pull" to obtain the latest version of the repository. This is a vital step:</p>
+                                    <p class="p2"><span class="s1">git pull&nbsp;<span style="font-size: small;"><span style="color: black; font-family: Calibri, Helvetica, sans-serif; font-size: medium;" size="3" face="Calibri,Helvetica,sans-serif"><span dir="ltr"><a href="https://github.com/zabdulz/static-analysis-lab.git" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable" style="font-family: Calibri, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-weight: 400;">https://github.com/zabdulz/static-analysis-lab.git</a></span></span></span></span></p>
+                                    <p class="p1"><span class="s1">(1) To get a feel for how it works, run the two test case for DuplicateDetector. This points the DuplicateDetector towards the src directory of the StaticAnalysis project itself, and scans only for files ending with “.java”.<span class="Apple-tab-span"> </span></span></p>
+                                    <p class="p2">For each file at the top of the JUnit test, change the path so that it reflects the path of the actual file in your file system.</p>
+                                    <p class="p2">A good approach is to open the console, to "cd" to the directory containing the directory / file of interest, and then to type "pwd". This will return the absolute file path that you can copy and paste.</p>
+                                    <p class="p1"><span class="s1">(2) Navigate to the directory containing the R scripts, and open an R console. Load the functions in the R script by typing:</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">source(“fileComparisonScripts.R”)</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">(3) To turn the CSV file we have just created into a PNG file, we call the CompareAll function in R:</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">CompareAll(“../../../outputs/fileComparison.csv”,"../../../outputs/fileSimilarity.png")</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">This should produce a PNG file in the outputs directory of your project. Open it and inspect it.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">(4) The matrix is quite coarse, because there aren’t many files to compare in this project.<span class="Apple-converted-space">&nbsp;</span></span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">Depending on the code that you have added to this project, the results may differ somewhat.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">Nonetheless, you should see one pair of files that produce a particularly bright (pair) of cells. Zoom in, and you will find that these are the ClassMetricsTest and the ClassDiagramSolutionTest.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">Intuitively, this makes sense; they are both test cases, and will share the same JUnit import statements and @Test annotations, etc.<span class="Apple-converted-space">&nbsp;</span></span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">(5) Let us verify this by comparing the two files specifically. These files have been hard-coded into the FileComparator test case, so run it.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">It will produce an output CSV file in the outputs directory called “TestComparison.csv”.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">(6) In the R terminal, run the second function:</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">CompareDetailed(“../../../outputs/TestComparison.csv","../../../outputs/detailedTestSimilarity.png")</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">And this will produce a detailed dot-matrix, showing how the two files overlap. In it, any diagonal lines of dots indicate that there are exact copies of code.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">(7) Now you know how to use the tool, try to apply it to your own lab / group work systems!</span></p>
+                                    <br>
+                                </div>
+                                <!-- end tocCart -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

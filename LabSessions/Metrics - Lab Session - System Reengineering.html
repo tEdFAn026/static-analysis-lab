@@ -1,0 +1,91 @@
+﻿<html lang="en-GB-UoL">
+<head>
+    <title>Lab session – System Reengineering</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta id="request-method" name="request-method" content="GET">
+    <meta name="author" content="Blackboard">
+    <meta name="copyright" content="© 1997-2018 Blackboard Inc. All Rights Reserved. US Patent No. 7,493,396 and 7,558,853. Additional Patents Pending.">
+    <meta name="keywords" content="Blackboard">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body id="learn-oe-body">
+    <!-- global_nav.jsp -->
+    <div id="globalNavPageContentArea">
+        <div class="locationPane">
+            <div role="main" id="contentPanel" class="contentPane  ">
+                <div class="shadow">
+                    <div id="editmodeWrapper">
+                        <div id="content" class="contentBox ">
+                            <div id="pageTitleDiv" class="pageTitle clearfix ">
+                                <div id="pageTitleBar" class="pageTitleIcon" tabindex="0">
+                                    <h1 id="pageTitleHeader" tabindex="-1">
+                                        <span id="pageTitleText">
+                                            Lab session
+                                        </span>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="container clearfix" id="containerdiv">
+                                <div class="vtbegenerated">
+                                    <br>
+                                    <p class="p1"><span style="text-decoration: underline;"><strong><span class="s1">Reverse-Engineering a Class Diagram using Reflection</span></strong></span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">In previous labs, and in your assignment, you are using the ASM byte code analysis library to analyse control-flow through methods.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">In this lab we are going to look at the system from a more abstract perspective - we are going to analyse the class-structure of the system: What are the classes, and how are they related to each other by class associations and inheritance?</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">For this task, we do not need to use special libraries such as ASM. The ability to examine the class structure is built into the Java development libraries. This capability is known as “Reflection”.<span class="Apple-converted-space">&nbsp;</span></span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">In this lab we will talk through how to use Reflection to reverse-engineer and visualise a class diagram.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">1. Obtain the base-code.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">We will re-use a the repository that we used for our last Static Analysis lab. Open the console and navigate to the StaticAnalysisLab directory. We will now pull in the most recent changes. These include the solutions to last week’s surgery as well as the base-code for this week’s. Type:</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">git pull <a href="https://github.com/zabdulz/static-analysis-lab.git" target="_blank"><span class="s2">https://github.com/zabdulz/static-analysis-lab.git</span></a></span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">2. Inspect the ClassDiagram class.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">Open the project in Eclipse (you may need to instruct Eclipse to refresh the project because its contents will have changed). Navigate to the file: structuralAnalysis.ClassDiagram.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">Within the class, there is a utility method processDirectory that will, given a directory and a package name, find all of the class files in it and its sub-directories, and return them as a list.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">3. Pick out class inheritance relationships</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">The Class objects in the list returned by processDirectory represent class files, but can be treated in a similar way to ClassNodes in ASM. To identify the super-class of a Class object, you just call the Class.getSuperClass() method.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">Write the code that will, for each class in the retrieved classes, identify the super class, and store this in a way that you can access later.<span class="Apple-converted-space">&nbsp;</span></span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">For storage, you might want to use a Map&lt;String,String&gt; object, where the strings represent the class and super-class respectively.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">4. Pick out the class associations</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">In a class diagram, association relations (represented by lines headed by diamonds) indicate that one class has a data member that is of the type of another class. You can access these relationships by calling the Class.getDeclaredFields() method.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">Similarly to step 3, write down the code that will, for each class, identify any data member associations, and store them in a way that you can access later (not in the same collection that you are using to store the inheritance relations).</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">5. Visualise the class diagram</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">In previous lectures we have used Graphviz dot to create diagrams for us (of Control Flow graphs). However, Graphviz is very versatile; you can use it to visualise almost any graph.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">Create a method in ClassDiagram that takes the set of relations you have collected from the classes, and outputs a text file (either as a file, or text that you can copy and paste into a file), so that it is rendered into a class file.</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">In doing so, refer to the GraphViz manual:</span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s2"><a onclick="this.href='/webapps/blackboard/content/contentWrapper.jsp?content_id=_1608526_1&amp;displayName=Linked+File&amp;navItem=content&amp;attachment=true&amp;course_id=_3544_1&amp;tab_group=courses&amp;href=http%3A%2F%2Fwww.graphviz.org%2FDocumentation%2Fdotguide.pdf';" href="http://www.graphviz.org/Documentation/dotguide.pdf">http://www.graphviz.org/Documentation/dotguide.pdf</a></span></p>
+                                    <p class="p2"></p>
+                                    <p class="p1"><span class="s1">Draw classes as squares. Inheritance relations should be lines with a hollow triangle at the end. Association relations should have a filled-in diamond at the end.</span></p>
+                                    <br>
+                                </div>
+                                <!-- end tocCart -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

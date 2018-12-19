@@ -1,0 +1,47 @@
+﻿<html lang="en-GB-UoL">
+<head>
+    <title>Lab Exercise – System Reengineering</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta id="request-method" name="request-method" content="GET">
+    <meta name="author" content="Blackboard">
+    <meta name="copyright" content="© 1997-2018 Blackboard Inc. All Rights Reserved. US Patent No. 7,493,396 and 7,558,853. Additional Patents Pending.">
+    <meta name="keywords" content="Blackboard">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body id="learn-oe-body">
+    <div id="globalNavPageContentArea">
+        <div class="locationPane">
+            <div role="main" id="contentPanel" class="contentPane  ">
+                <div class="shadow">
+                    <div id="editmodeWrapper">
+                        <div id="content" class="contentBox ">
+                            <div id="pageTitleDiv" class="pageTitle clearfix ">
+                                <div id="pageTitleBar" class="pageTitleIcon" tabindex="0">
+                                    <h1 id="pageTitleHeader" tabindex="-1">
+                                        <span id="pageTitleText">
+                                            Lab Exercise
+                                        </span>
+                                    </h1>
+                                    <span id="_titlebarExtraContent" class="titleButtons"></span>
+                                </div>
+                            </div>
+                            <div class="container clearfix" id="containerdiv">
+                                <div class="vtbegenerated">
+                                    <p>In the lectures we have repeatedly referred to the fact that useful information about a software system can be readily obtained by examining its history. The change in the size (e.g. LOC) of a system can provide insights into the extent to which a system has changed over time. The question of how frequently files have changed can give us an insight into the likelihood that they will contain faults (this is what the Code Churn metric does).<br><br>With most version repositories this information is easily obtainable. In Git, the raw data containing all of the historical data about a project can be obtained with the `git log` command. This command will, given the necessary options, tell you when which file was changed, what lines within it were changed, what the commit comment was, etc.<br><br>With the help of a small bash script, it becomes possible to generate a CSV file with useful historical data about a repository.<br><br>One such script has been committed to the src/main/scripts repository in the StaticAnalysis Github repository. Open it in an editor, to ensure that you understand how it works. Comments have been inserted to help with this.<br><br><strong>Task 1: Let's run the script.</strong><br><br>Pull the latest version of the StaticAnalysisLab package to your local copy. Pull from my original repository:</p>
+                                    <p>git pull <a onclick="this.href='/webapps/blackboard/content/contentWrapper.jsp?content_id=_1620614_1&amp;displayName=Linked+File&amp;navItem=content&amp;attachment=true&amp;course_id=_3544_1&amp;tab_group=courses&amp;href=https%3A%2F%2Fgithub.com%2Fneilwalkinshaw%2FStaticAnalysisLab.git';" href="https://github.com/neilwalkinshaw/StaticAnalysisLab.git">https://github.com/zabdulz/static-analysis-lab.git</a><br><br>Create an empty directory within which we can run this experiment, and copy the rep-mining.sh script you've just pulled into it.<br><br>Open the script in an editor, and edit the settings at the top so that it points towards a repository you're interested in (e.g. your group project repository).</p>
+                                    <p>Make sure that it is executable (chmod +x rep-mining.sh), and run it (./rep-mining.sh)<br><br>Watch it repeatedly check out and analyse different versions of the target system.<br><br>Take the resulting CSV file, and visualise the change in LOC in your favourite visualisation tool (surely R!).<br><br><strong>Task 2: Create a data file that can be used to compute code-churn</strong><br><br>Alter the script (or create a new, separate version), which will for each version record which files were changed (or created or deleted), by recording the number of lines that were added and removed.<br><br>Hint: The command `git show --numstat` can be used to capture this data.</p>
+                                    <p><strong>Task 3: Calculate the code churn from this data.</strong></p>
+                                    <p>Write some Java code (or an R script) to do this. If you can, visualise the code churn in a way that points you towards the most interesting areas within the project.</p>
+                                </div>
+                                <!-- end tocCart -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

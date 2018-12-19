@@ -1,0 +1,84 @@
+﻿<html lang="en-GB-UoL">
+<head>
+    <title>Dynamic Analysis Lab – System Reengineering</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta id="request-method" name="request-method" content="GET">
+    <meta name="author" content="Blackboard">
+    <meta name="copyright" content="© 1997-2018 Blackboard Inc. All Rights Reserved. US Patent No. 7,493,396 and 7,558,853. Additional Patents Pending.">
+    <meta name="keywords" content="Blackboard">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body id="learn-oe-body">
+    <div id="globalNavPageContentArea">
+        <div class="locationPane">
+            <div role="main" id="contentPanel" class="contentPane  ">
+                <div class="shadow">
+                    <div id="editmodeWrapper">
+                        <div id="content" class="contentBox ">
+                            <div id="pageTitleDiv" class="pageTitle clearfix ">
+                                <div id="pageTitleBar" class="pageTitleIcon" tabindex="0">
+                                    <h1 id="pageTitleHeader" tabindex="-1">
+                                        <span id="pageTitleText">
+                                            Dynamic Analysis Lab
+                                        </span>
+                                    </h1>
+                                    <span id="_titlebarExtraContent" class="titleButtons"></span>
+                                </div>
+                            </div>
+                            <div class="container clearfix" id="containerdiv">
+                                <br>
+                                <ul class="attachments clearfix">
+                                    <li class="label">Attached Files</li>
+                                    <li>
+                                        <a href="" target="_blank">Trace.java</a>
+                                        (<span id="/xid-4333647_2_fileSize">1.341 KB</span>)
+                                    </li>
+                                    <li>
+                                        <a href="" target="_blank">plugin</a>
+                                        (<span id="/xid-4333648_2_fileSize">1.171 KB</span>)
+                                    </li>
+                                </ul><div class="vtbegenerated">
+                                    <p>Today we will construct and apply our first dynamic analysis tool. Instead of analysing the source code, our tool will analyse the program as it executes. We will use Aspect-Oriented programming, as discussed in the lecture. Do not worry if you haven’t heard of Aspect Oriented programming before. For our purposes, we will simply treat it as a tool like any other. Hopefully you will get the gist of how it works as the lab progresses.</p>
+                                    <p>Create a new directory called “dynamicAnalysisLab”. Copy the file “Tracer.java” into that directory. Open the file. Although this looks like a Java program, there are subtle differences. It will not compile with a standard Java compiler. This is our aspect.&nbsp;</p>
+                                    <p>In our aspect, we define a logger object. This uses the built-in java logging framework to record messages. In the constructor (<span style="font-family: 'courier new', courier;">Trace(){…}</span>), we set this logger up. The first two lines add a “FileHandler” object to the logger, so that any messages can be written out to a file (in our case “trace.log”). This line defines a “pointcut”. This tells the aspect weaver which parts of the code we are interested in.</p>
+                                    <p>So, this point cut&nbsp; &nbsp;<span style="font-family: 'courier new', courier;">traceMethods().execution(* *(..)</span>) tells it to look at the execution of every method from every class, for any pattern of parameters. <span style="font-family: 'courier new', courier;">!cflow(within(Trace))</span> tells it to ignore anything that happens within the current Trace aspect, so we are only concentrating on the running program. Specific details of how to specify a point cut can be found <a href="https://eclipse.org/aspectj/doc/released/progguide/semantics-pointcuts.html" target="_blank">here</a>.</p>
+                                    <p>The code in the block starting with the keyword before()&nbsp;defines what should happen before any of the point cuts defined. It has aspect to certain details about the current point in the execution (accessed through the object thisJoinPointStaticPart). This code takes the relevant information from that object, and sends it to the logger defined above. So, for every method, it records its details along with which method called it.</p>
+                                    <p>Let us now use this to compile the core of our dynamic analysis tool: Make sure you are in the directory containing Trace.java, and type:</p>
+                                    <p><strong>ajc -cp /usr/share/java/aspectjrt.jar -outxml -outjar aspects.jar Trace.java</strong></p>
+                                    <p>This will produce a file called <strong>aspects.jar (remember the path to this file)</strong>. You have just created your first dynamic analysis tool! Now, let us apply it to a real project.</p>
+                                    <p>For our project, we will use the tool to trace the methods that are executed during the execution of a test case. For this we will use our JFreeChart&nbsp;example project.</p>
+                                    <p>Since we will be running test cases within it from the command line, to save ourselves the need to specify every class path element, we will get Maven&nbsp;to package it into a "fat jar", a jar file containing all of the dependencies in one.</p>
+                                    <p>
+                                        Open the JFreeChart pom.xml&nbsp;file. Find the &lt;plugins&gt; ...
+                                        <!-- -->
+                                        <!--<span class="mceItemHiddenSpellWord"-->plugins&gt; section. Open the file attached to this lab called "plugin", and copy the contents into a suitable slot in the plugins&nbsp;section.
+                                    </p>
+                                    <pre></pre>
+                                    <p>Then, on the&nbsp;command line, type:&nbsp;<strong>mvn&nbsp;package -DskipTests</strong></p>
+                                    <p>[If you do not skip the tests, it will not build the package because one of the failing tests will terminate the build process]</p>
+                                    <p>This should create a jar in your target directory called jfreechart-1.5.0-SNAPSHOT-jar-with-dependencies.jar</p>
+                                    <p>Now we are ready to run the trace.</p>
+                                    <p>On the command line, type the following:</p>
+                                    <p><strong>java -javaagent:/usr/share/java/aspectjweaver.jar -cp&nbsp;[PATH-TO-PREVIOUSLY-CREATED-aspects.jar]:target/jfreechart-1.5.0-SNAPSHOT-jar-with-dependencies.jar:target/test-classes:/usr/share/java/junit4.jar:/usr/share/java/hamcrest-core.jar org.junit.runner.JUnitCore&nbsp;org.jfree.chart.AreaChartTest</strong></p>
+                                    <p>This should run the test and store the results in a file called trace.log</p>
+                                    <p style="font-family: 'Open Sans', sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px 0px 1em; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">How many methods were executed? Take a guess?</p>
+                                    <p style="font-family: 'Open Sans', sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px 0px 1em; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">Run <strong>wc --lines trace.log</strong> to find out…</p>
+                                    <p>Important: If you are finished with the trace file, delete it, because it will be large. Run rm trace.log</p>
+                                    <p>Bonus task:</p>
+                                    <p>Write some code in your StaticAnalysisLab&nbsp;project that can read the trace data into a CSV file to store the number of times a particular class is called.&nbsp;</p>
+                                    <p>Create a class diagram visualisation for JFreeChart (using the code from the previous lab), and use the dynamic data to determine the size of the various classes.</p>
+                                    <pre></pre>
+                                    <br>
+                                </div>
+                                <!-- end tocCart -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

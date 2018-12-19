@@ -1,0 +1,101 @@
+﻿<html lang="en-GB-UoL">
+<head>
+    <title>Lab session – System Reengineering</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta id="request-method" name="request-method" content="GET">
+    <meta name="author" content="Blackboard">
+    <meta name="copyright" content="© 1997-2018 Blackboard Inc. All Rights Reserved. US Patent No. 7,493,396 and 7,558,853. Additional Patents Pending.">
+    <meta name="keywords" content="Blackboard">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body id="learn-oe-body">
+    <!-- global_nav.jsp -->
+    <div id="globalNavPageContentArea">
+        <div class="locationPane">
+            <div role="main" id="contentPanel" class="contentPane  ">
+                <div class="shadow">
+                    <div id="editmodeWrapper">
+                        <div id="content" class="contentBox ">
+                            <div id="pageTitleDiv" class="pageTitle clearfix ">
+                                <div id="pageTitleBar" class="pageTitleIcon" tabindex="0">
+                                    <h1 id="pageTitleHeader" tabindex="-1">
+                                        <span id="pageTitleText">
+                                            Lab session
+                                        </span>
+                                    </h1>
+                                    <span id="_titlebarExtraContent" class="titleButtons"></span>
+                                </div>
+                          </div>
+                            <div class="container clearfix" id="containerdiv">
+                                <div class="vtbegenerated">
+                                    <br>
+                                    <p class="p1"><span class="s1">Welcome to the lab on static analysis. In this session we will familiarise ourselves with some of the basic Static Analysis concepts, and will learn how to apply this to real Java code.</span></p>
+                                    <p class="p1"><span class="s1">For this lab exercise, we will develop our own static analysis tool, and will use it to carry out some relatively superficial analyses of Java code. We say “superficial”, but this will still be more in-depth than the analyses we carried out with the bash scripts last week, because the static analysis gives us much more fine-grained information to work with.</span></p>
+                                    <p class="p1"><span class="s1">For this lab work, we have provided a small skeletal Java project on Github. You should be able to clone it by following this link:</span></p>
+                                    <p class="p1"><span class="s2"><a onclick="this.href='/webapps/blackboard/content/contentWrapper.jsp?content_id=_1605382_1&amp;displayName=Linked+File&amp;navItem=content&amp;attachment=true&amp;course_id=_3544_1&amp;tab_group=courses&amp;href=https%3A%2F%2Fclassroom.github.com%2Fa%2Fzxn7lqq6';" href="https://classroom.github.com/a/zxn7lqq6">https://classroom.github.com/a/zxn7lqq6</a></span></p>
+                                    <p class="p2"><span class="s1">This will create a private repository for you, that only you and the course moderators / GTAs will be able to see.</span></p>
+                                    <h5 class="p2"><span class="s1">1. Build the code and load it into Eclipse.</span><span class="s1"></span></h5>
+                                    <p class="p1"><span class="s1">The code uses Maven to pull in some external dependencies and facilitate building. To compile the project you need to open a console, change directories to the repository directory (containing the pom.xml file), and type:</span></p>
+                                    <p class="p1"><span class="s1" style="font-family: 'courier new', courier;">mvn package</span></p>
+                                    <p class="p1"><span class="s1">Then, if you want to load it into Eclipse</span></p>
+                                    <ol>
+                                        <li class="p1"><span class="s1"> type:&nbsp; "</span><span class="s1" style="font-family: 'courier new', courier;">mvn eclipse:eclipse" </span><span class="s1">which will make an Eclipse project file for you. Open up <strong>Eclipse4.6</strong> and load the project.</span></li>
+                                        <li class="p1"><span class="s1">Or you could also import it as Maven project directly without having to convert it into an eclipse project </span></li>
+                                    </ol>
+                                    <h5 class="p1"><span class="s1">2. Familiarise yourself with some of the key ASM concepts.</span></h5>
+                                    <p class="p1"><span class="s1">In this lab we will be extracting control flow graphs from Java methods. This is achieved by using the ASM Java byte code analysis framework:</span></p>
+                                    <p class="p1"><span class="s2"><a onclick="this.href='/webapps/blackboard/content/contentWrapper.jsp?content_id=_1605382_1&amp;displayName=Linked+File&amp;navItem=content&amp;attachment=true&amp;course_id=_3544_1&amp;tab_group=courses&amp;href=http%3A%2F%2Fasm.ow2.org%2F';" href="http://asm.ow2.org/">http://asm.ow2.org/</a></span></p>
+                                    <p class="p2"><span class="s1">Our project automatically imports this when you run Maven.</span></p>
+                                    <p class="p1"><span class="s1">ASM loads classes and enables us to analyse them in terms of a tree structure. Each class (stored as a ClassNode object) comprises a list of MethodNode objects (representing the individual methods), a list of Attribute objects representing the class attributes, as well as objects representing fields, interfaces, and so on.</span></p>
+                                    <p class="p1"><span class="s1">For this lab we are particularly interested in analysing individual methods, so let us concentrate on the MethodNode objects.</span></p>
+                                    <p class="p1"><span class="s1">Each MethodNode object contains a list of Instructions (stored as an InsList), which ultimately contains the control flow.</span></p>
+                                    <p class="p1"><span class="s1">You can learn more about the tree API by skimming part 2 of the ASM tutorial here:</span></p>
+                                    <p class="p1"><span class="s2"><a onclick="this.href='/webapps/blackboard/content/contentWrapper.jsp?content_id=_1605382_1&amp;displayName=Linked+File&amp;navItem=content&amp;attachment=true&amp;course_id=_3544_1&amp;tab_group=courses&amp;href=http%3A%2F%2Fdownload.forge.objectweb.org%2Fasm%2Fasm4-guide.pdf';" href="http://download.forge.objectweb.org/asm/asm4-guide.pdf">http://download.forge.objectweb.org/asm/asm4-guide.pdf</a></span></p>
+                                    <p class="p2"><span class="s1">However, for now, you should be able to get by without needing to look at this too closely. The code we have provided on Github lets you load a Control Flow Graph for any method already.</span></p>
+                                    <h5 class="p1"><span class="s1">3. Extract a control flow graph.</span></h5>
+                                    <p class="p1"><span class="s1">To get an idea of what control flow graphs of Java classes look like, you can use the dependenceAnalysis.util.cfg.CFGExtractor class.<span class="Apple-converted-space">&nbsp;</span></span></p>
+                                    <p class="p1"><span class="s1">The main method in that class points towards a class in the Java libraries (this is hard-coded for the sake of simplicity). Run the main method and look at the output on the Eclipse console.</span></p>
+                                    <p class="p1"><span class="s1">This produces textual representations for all of the CFGs in the class.</span></p>
+                                    <h5 class="p1"><span class="s1">4. Visualise one of the CFGs.</span></h5>
+                                    <p class="p1"><span class="s1"></span><span class="s1">The textual representation is provided in a format that can be read by GraphViz dot. This is also installed on the Linux installations in the lab.</span></p>
+                                    <p class="p1"><span class="s1">Copy one of the larger CFGs (starting from `digraph’ and ending with the closing bracket), paste it into a new text file, and save it (for this example we’ll call it ‘cfg.dot’).</span></p>
+                                    <p class="p1"><span class="s1">In the console, change to the directory containing the text file.</span></p>
+                                    <p class="p1"><span class="s1">type:</span></p>
+                                    <p class="p1"><span class="s1" style="font-family: 'courier new', courier;">dot -Tpdf cfg.dot &gt; cfg.pdf</span></p>
+                                    <p class="p1"><span class="s1">then load cfg.pdf in a pdf viewer.<span class="Apple-converted-space">&nbsp;</span></span></p>
+                                    <h5 class="p1"><span class="s1">5. Write your own metrics tool.</span></h5>
+                                    <p class="p1"><span class="s1">In Eclipse, open up the project you’ve checked out, and create a new file CFGMetrics.java in the package dependenceAnalysis.util.</span></p>
+                                    <p class="p1"><span class="s1">Now, by drawing upon the code that is in CFGExtractor, write the code that for each method in a given class:</span></p>
+                                    <ol class="ol1">
+                                        <li class="li1">
+                                            <span class="s1">
+                                                Writes out a CSV file that counts the number of instructions (number of CFG nodes) for each method (i.e. each line in the file should read &lt;method_name&gt;,
+                                                <instructions>
+                                                    ).
+                                                </instructions>
+                                            </span>
+                                        </li>
+                                        <li class="li1"><span class="s1">Writes out a CSV file that counts the number of branches in each method. If you add 1 to this number, you obtain a measure known as "Cyclomatic&nbsp;Complexity".</span></li>
+                                    </ol>
+                                    <p class="p1"><span class="s1">Or, for all classes in a given system:</span></p>
+                                    <ol class="ol1">
+                                        <li class="li1"><span class="s1">Writes out a CSV with the number of attributes in the class,<span class="Apple-converted-space">&nbsp;</span></span></li>
+                                        <li class="li1"><span class="s1">Write out a CSV with the number of methods in the class</span></li>
+                                        <li class="li1"><span class="s1">… any other useful metrics you can think of.</span></li>
+                                    </ol>
+                                    <h5><span class="s1">6. Apply to your Lab and Group systems</span></h5>
+                                    <p>Using your own tool, you have now gathered some much more in-depth metrics than could be gathered from the bash scripts we were using last week.</p>
+                                    <p>Try to visualise these new metrics, perhaps in combination with some of the simpler metrics you calculated last week. What does this tell you about the most important classes in your systems? What are the most important (or complex) methods?</p>
+                                </div>
+                                <!-- end tocCart -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
